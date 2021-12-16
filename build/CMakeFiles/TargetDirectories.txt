@@ -1,0 +1,8 @@
+/nfs/lfi.mipt.su/user/p/prutovyh/5sem/simpleHE/build/CMakeFiles/install/strip.dir
+/nfs/lfi.mipt.su/user/p/prutovyh/5sem/simpleHE/build/CMakeFiles/install/local.dir
+/nfs/lfi.mipt.su/user/p/prutovyh/5sem/simpleHE/build/CMakeFiles/install.dir
+/nfs/lfi.mipt.su/user/p/prutovyh/5sem/simpleHE/build/CMakeFiles/list_install_components.dir
+/nfs/lfi.mipt.su/user/p/prutovyh/5sem/simpleHE/build/CMakeFiles/simpleHE.exe.dir
+/nfs/lfi.mipt.su/user/p/prutovyh/5sem/simpleHE/build/CMakeFiles/rebuild_cache.dir
+/nfs/lfi.mipt.su/user/p/prutovyh/5sem/simpleHE/build/CMakeFiles/SimpleHE.dir
+/nfs/lfi.mipt.su/user/p/prutovyh/5sem/simpleHE/build/CMakeFiles/edit_cache.dir

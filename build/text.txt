@@ -1,0 +1,2242 @@
+
+*************************************************************
+ Geant4 version Name: geant4-10-01-patch-02 [MT]   (19-June-2015)
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+<<< Geant4 Physics List simulation engine: QGSP_BERT 4.0
+
+Checking overlaps for volume sc1pv ... OK! 
+Checking overlaps for volume sc2pv ... OK! 
+### Adding tracking cuts for neutron  TimeCut(ns)= 10000  KinEnergyCut(MeV)= 0
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Current available graphics systems are:
+  ASCIITree (ATree)
+  DAWNFILE (DAWNFILE)
+  G4HepRep (HepRepXML)
+  G4HepRepFile (HepRepFile)
+  OpenGLImmediateQt (OGLI, OGLIQt)
+  OpenGLImmediateX (OGLIX)
+  OpenGLImmediateXm (OGLIXm, OGLI_FALLBACK, OGLIQt_FALLBACK)
+  OpenGLStoredQt (OGL, OGLS, OGLSQt)
+  OpenGLStoredX (OGLSX)
+  OpenGLStoredXm (OGLSXm, OGL_FALLBACK, OGLS_FALLBACK, OGLSQt_FALLBACK)
+  RayTracer (RayTracer)
+  RayTracerX (RayTracerX)
+  VRML1FILE (VRML1FILE)
+  VRML2FILE (VRML2FILE)
+  gMocrenFile (gMocrenFile)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByCharge
+  drawByParticleID
+  drawByOriginVolume
+  drawByAttribute
+
+Registered filter factories:
+  chargeFilter
+  particleFilter
+  originVolumeFilter
+  attributeFilter
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+Available colours:
+  black, blue, brown, cyan, gray, green, grey, magenta, red, white, yellow
+
+
+phot:   for  gamma    SubType= 12  BuildTable= 0
+      LambdaPrime table from 200 keV to 10 TeV in 54 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       PhotoElectric :  Emin=        0 eV    Emax=       10 TeV   AngularGenSauterGavrila  FluoActive
+
+compt:   for  gamma    SubType= 13  BuildTable= 1
+      Lambda table from 100 eV  to 1 MeV, 7 bins per decade, spline: 1
+      LambdaPrime table from 1 MeV to 10 TeV in 49 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       Klein-Nishina :  Emin=        0 eV    Emax=       10 TeV
+
+conv:   for  gamma    SubType= 14  BuildTable= 1
+      Lambda table from 1.022 MeV to 10 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        BetheHeitler :  Emin=        0 eV    Emax=       80 GeV
+     BetheHeitlerLPM :  Emin=       80 GeV   Emax=       10 TeV
+
+msc:   for e-    SubType= 10
+      RangeFactor= 0.04, stepLimitType: 1, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=      100 MeV  Table with 42 bins Emin=    100 eV    Emax=    100 MeV
+        WentzelVIUni :  Emin=      100 MeV   Emax=       10 TeV  Table with 35 bins Emin=    100 MeV   Emax=     10 TeV
+
+eIoni:   for  e-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha :  Emin=        0 eV    Emax=       10 TeV
+
+eBrem:   for  e-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      LPM flag: 1 for E > 1 GeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin=        0 eV    Emax=        1 GeV   DipBustGen
+            eBremLPM :  Emin=        1 GeV   Emax=       10 TeV   DipBustGen
+
+CoulombScat:   for  e-, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from 100 MeV to 10 TeV, 7 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=      100 MeV   Emax=       10 TeV
+
+msc:   for e+    SubType= 10
+      RangeFactor= 0.04, stepLimitType: 1, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=      100 MeV  Table with 42 bins Emin=    100 eV    Emax=    100 MeV
+        WentzelVIUni :  Emin=      100 MeV   Emax=       10 TeV  Table with 35 bins Emin=    100 MeV   Emax=     10 TeV
+
+eIoni:   for  e+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha :  Emin=        0 eV    Emax=       10 TeV
+
+eBrem:   for  e+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      LPM flag: 1 for E > 1 GeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin=        0 eV    Emax=        1 GeV   DipBustGen
+            eBremLPM :  Emin=        1 GeV   Emax=       10 TeV   DipBustGen
+
+annihil:   for  e+, integral: 1     SubType= 5  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  e+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from 100 MeV to 10 TeV, 7 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=      100 MeV   Emax=       10 TeV
+
+msc:   for proton    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  proton    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=        2 MeV
+          BetheBloch :  Emin=        2 MeV   Emax=       10 TeV
+
+hBrems:   for  proton    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  proton    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 13x1001; from 7.50618 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  proton, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of anti_proton
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for GenericIon    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV
+
+ionIoni:   for  GenericIon    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.01, dRoverRange= 0.1, integral: 1, fluct: 1, linLossLimit= 0.02
+      Stopping Power data for 17 ion/material pairs 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon :  Emin=        0 eV    Emax=        2 MeV
+          BetheBloch :  Emin=        2 MeV   Emax=       10 TeV
+
+msc:   for alpha    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+ionIoni:   for  alpha    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.01, dRoverRange= 0.1, integral: 1, fluct: 1, linLossLimit= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon :  Emin=        0 eV    Emax=   7.9452 MeV
+          BetheBloch :  Emin=   7.9452 MeV   Emax=       10 TeV
+
+msc:   for anti_proton    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  anti_proton    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=        2 MeV
+          BetheBloch :  Emin=        2 MeV   Emax=       10 TeV
+
+hBrems:   for  anti_proton    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  anti_proton    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 13x1001; from 7.50618 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  anti_proton, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 10 TeV, 7 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for kaon+    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  kaon+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=  1.05231 MeV
+          BetheBloch :  Emin=  1.05231 MeV   Emax=       10 TeV
+
+hBrems:   for  kaon+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  kaon+    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 14x1001; from 3.94942 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  kaon+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 10 TeV, 7 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for kaon-    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  kaon-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=  1.05231 MeV
+          BetheBloch :  Emin=  1.05231 MeV   Emax=       10 TeV
+
+hBrems:   for  kaon-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  kaon-    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 14x1001; from 3.94942 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  kaon-, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of kaon+
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for mu+    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+muIoni:   for  mu+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=      200 keV
+          BetheBloch :  Emin=      200 keV   Emax=        1 GeV
+        MuBetheBloch :  Emin=        1 GeV   Emax=       10 TeV
+
+muBrems:   for  mu+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin=        0 eV    Emax=       10 TeV
+
+muPairProd:   for  mu+    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 17x1001; from 1 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  mu+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 10 TeV, 7 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for mu-    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+muIoni:   for  mu-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=      200 keV
+          BetheBloch :  Emin=      200 keV   Emax=        1 GeV
+        MuBetheBloch :  Emin=        1 GeV   Emax=       10 TeV
+
+muBrems:   for  mu-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin=        0 eV    Emax=       10 TeV
+
+muPairProd:   for  mu-    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 17x1001; from 1 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  mu-, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of mu+
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for pi+    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  pi+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=  297.505 keV
+          BetheBloch :  Emin=  297.505 keV   Emax=       10 TeV
+
+hBrems:   for  pi+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  pi+    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 16x1001; from 1.11656 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  pi+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 10 TeV, 7 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for pi-    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  pi-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=  297.505 keV
+          BetheBloch :  Emin=  297.505 keV   Emax=       10 TeV
+
+hBrems:   for  pi-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  pi-    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 16x1001; from 1.11656 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  pi-, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of pi+
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+====================================================================
+                  HADRONIC PROCESSES SUMMARY (verbose level 1)
+
+---------------------------------------------------
+                           Hadronic Processes for neutron
+
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: neutronInelastic
+        Model:                      QGSP: 12 GeV ---> 100 TeV
+        Model:                      FTFP: 9.5 GeV ---> 25 GeV
+        Model:            BertiniCascade: 0 eV  ---> 9.9 GeV
+     Cr_sctns:      G4NeutronInelasticXS: 0 eV  ---> 100 TeV
+     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+  Process: nCapture
+        Model:               nRadCapture: 0 eV  ---> 100 TeV
+     Cr_sctns:        G4NeutronCaptureXS: 0 eV  ---> 100 TeV
+     Cr_sctns:          GheishaCaptureXS: 0 eV  ---> 100 TeV
+
+  Process: nKiller
+
+---------------------------------------------------
+                           Hadronic Processes for GenericIon
+
+  Process: ionInelastic
+        Model:  Binary Light Ion Cascade: 0 eV  ---> 4 GeV
+        Model:                      FTFP: 2 GeV ---> 100 TeV
+     Cr_sctns: Glauber-Gribov nucleus nucleus: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for He3
+
+  Process: He3Inelastic
+        Model:  Binary Light Ion Cascade: 0 eV  ---> 4 GeV
+        Model:                      FTFP: 2 GeV ---> 100 TeV
+     Cr_sctns: Glauber-Gribov nucleus nucleus: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for alpha
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: alphaInelastic
+        Model:  Binary Light Ion Cascade: 0 eV  ---> 4 GeV
+        Model:                      FTFP: 2 GeV ---> 100 TeV
+     Cr_sctns: Glauber-Gribov nucleus nucleus: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for anti_He3
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: anti_He3Inelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_alpha
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: anti_alphaInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_deuteron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: anti_deuteronInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_neutron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: anti_neutronInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for anti_proton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: anti_protonInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_triton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: anti_tritonInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for deuteron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: dInelastic
+        Model:  Binary Light Ion Cascade: 0 eV  ---> 4 GeV
+        Model:                      FTFP: 2 GeV ---> 100 TeV
+     Cr_sctns: Glauber-Gribov nucleus nucleus: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for e+
+
+  Process: positronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for e-
+
+  Process: electronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for gamma
+
+  Process: photonNuclear
+        Model:            BertiniCascade: 0 eV  ---> 3.5 GeV
+        Model:           TheoFSGenerator: 3 GeV ---> 100 TeV
+     Cr_sctns:            PhotoNuclearXS: 0 eV  ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for kaon+
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: kaon+Inelastic
+        Model:                      QGSP: 12 GeV ---> 100 TeV
+        Model:                      FTFP: 9.5 GeV ---> 25 GeV
+        Model:            BertiniCascade: 0 eV  ---> 9.9 GeV
+     Cr_sctns:  ChipsKaonPlusInelasticXS: 0 eV  ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for kaon-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: kaon-Inelastic
+        Model:                      QGSP: 12 GeV ---> 100 TeV
+        Model:                      FTFP: 9.5 GeV ---> 25 GeV
+        Model:            BertiniCascade: 0 eV  ---> 9.9 GeV
+     Cr_sctns: ChipsKaonMinusInelasticXS: 0 eV  ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+  Process: hBertiniCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for lambda
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: lambdaInelastic
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+        Model:                      FTFP: 2 GeV ---> 100 TeV
+     Cr_sctns:   ChipsHyperonInelasticXS: 0 eV  ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for mu+
+
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for mu-
+
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+
+  Process: muMinusCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for pi+
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 1.0001 GeV
+        Model:           hElasticGlauber: 1 GeV ---> 100 TeV
+     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: pi+Inelastic
+        Model:                      QGSP: 12 GeV ---> 100 TeV
+        Model:                      FTFP: 9.5 GeV ---> 25 GeV
+        Model:            BertiniCascade: 0 eV  ---> 9.9 GeV
+     Cr_sctns:      G4CrossSectionPairGG: 0 eV  ---> 100 TeV
+                         G4CrossSectionPairGG: G4PiNuclearCrossSection cross sections 
+                           below 91 GeV, Glauber-Gribov above 
+     Cr_sctns:      G4CrossSectionPairGG: 0 eV  ---> 100 TeV
+                         G4CrossSectionPairGG: G4PiNuclearCrossSection cross sections 
+                           below 91 GeV, Glauber-Gribov above 
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for pi-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 1.0001 GeV
+        Model:           hElasticGlauber: 1 GeV ---> 100 TeV
+     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: pi-Inelastic
+        Model:                      QGSP: 12 GeV ---> 100 TeV
+        Model:                      FTFP: 9.5 GeV ---> 25 GeV
+        Model:            BertiniCascade: 0 eV  ---> 9.9 GeV
+     Cr_sctns:      G4CrossSectionPairGG: 0 eV  ---> 100 TeV
+                         G4CrossSectionPairGG: G4PiNuclearCrossSection cross sections 
+                           below 91 GeV, Glauber-Gribov above 
+     Cr_sctns:      G4CrossSectionPairGG: 0 eV  ---> 100 TeV
+                         G4CrossSectionPairGG: G4PiNuclearCrossSection cross sections 
+                           below 91 GeV, Glauber-Gribov above 
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+  Process: hBertiniCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for proton
+
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:      ChipsProtonElasticXS: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: protonInelastic
+        Model:                      QGSP: 12 GeV ---> 100 TeV
+        Model:                      FTFP: 9.5 GeV ---> 25 GeV
+        Model:            BertiniCascade: 0 eV  ---> 9.9 GeV
+     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for triton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: tInelastic
+        Model:  Binary Light Ion Cascade: 0 eV  ---> 4 GeV
+        Model:                      FTFP: 2 GeV ---> 100 TeV
+     Cr_sctns: Glauber-Gribov nucleus nucleus: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+================================================================
+
+---> Begin of event: 0
+
+*********************************************************************************************************
+* G4Track Information:   Particle = mu-,   Track ID = 1,   Parent ID = 0
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0        0        0        0       100        0        0         0       World initStep
+    1        0        0     46.2      90.6     9.39     46.2      46.2       sc1pv Transportation
+Pos: (0,0,46.18802153517006) edep 9.394747647139207 [MeV]
+    2    0.142   -0.235     69.4      85.5     5.09     23.2      69.4       World Transportation
+Pos: (0.1417290595958119,-0.2351797236961868,69.41781337953903) edep 5.089366970826415 [MeV]
+    3    0.945   -0.401       86      81.2     3.78     16.6        86       World muIoni
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  1 ---------------
+    :     0.945    -0.401        86     0.506                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+Pos: (0.9452156961179421,-0.4007560630441727,85.99956104773248) edep 3.778614798384017 [MeV]
+    4      4.5    -1.67      136      69.2       12     50.4       136       World muIoni
+Pos: (4.49927259077346,-1.666242358590134,136.1935493393911) edep 12.00095750782019 [MeV]
+    5     6.32    -2.79      156      64.5     4.36     20.2       157       World muIoni
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  2 ---------------
+    :      6.32     -2.79       156     0.321                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+Pos: (6.317944288115291,-2.785990879930772,156.3095546975134) edep 4.363043023710611 [MeV]
+    6     6.97    -3.21      163      61.8     1.89     6.34       163       World muIoni
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  3 ---------------
+    :      6.97     -3.21       163     0.823                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+Pos: (6.973444901170295,-3.213149772164701,162.5961098977099) edep 1.893322558673814 [MeV]
+    7     10.5     -3.7      189      54.3     7.23     26.8       190       World muIoni
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  4 ---------------
+    :      10.5      -3.7       189     0.292                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+Pos: (10.49393102087484,-3.695554770869027,189.0974533161655) edep 7.232113939818564 [MeV]
+    8     14.1    -4.71      216      46.6     7.69     27.7       217       World muIoni
+Pos: (14.14079043821581,-4.713512801418558,216.4729645598092) edep 7.68648507091091 [MeV]
+    9     14.3    -4.77      218      45.9    0.362     1.34       219       World muIoni
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  5 ---------------
+    :      14.3     -4.77       218     0.371                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+Pos: (14.31775652098264,-4.77346652627033,217.7966801879053) edep 0.3615397263764071 [MeV]
+   10     19.2    -6.49      236      40.3     5.26     19.1       238       World muIoni
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  6 ---------------
+    :      19.2     -6.49       236      0.33                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+Pos: (19.22058112606075,-6.49422440530003,236.1476616658924) edep 5.258119273313516 [MeV]
+   11     22.4    -7.57      248      35.9     4.09     12.5       250       World muIoni
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  7 ---------------
+    :      22.4     -7.57       248     0.297                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+Pos: (22.43640457181755,-7.567333104982249,248.2175082615275) edep 4.088929069203333 [MeV]
+   12     26.4    -9.39      262      30.6     5.36     14.8       265       World muIoni
+Pos: (26.38198894134328,-9.391932123501427,262.3471064570556) edep 5.362452397507555 [MeV]
+   13     29.4    -10.8      273      26.6     3.92     11.6       277       World muIoni
+Pos: (29.37525299983089,-10.76693846441283,273.4881536967725) edep 3.921568802986112 [MeV]
+   14     31.9    -12.1      283        23     3.67     9.51       286       World muIoni
+Pos: (31.87632106167254,-12.12812819432739,282.5575277917126) edep 3.667533268891925 [MeV]
+   15     33.7    -12.9      290      19.5      3.5     7.71       294       World muIoni
+Pos: (33.68873348444495,-12.92700201057928,290.0000625661187) edep 3.503031053294955 [MeV]
+   16       35    -13.2      296      16.4     3.06     6.16       300       World muIoni
+Pos: (34.9698437143563,-13.1715199485521,296.0109192795382) edep 3.056535998535596 [MeV]
+   17     35.7    -13.5      301      13.5     2.93     4.95       305       World muIoni
+Pos: (35.6752815106879,-13.45555229123948,300.9001952430417) edep 2.930779645564054 [MeV]
+   18       36    -13.7      305      11.1     2.38     3.94       309       World muIoni
+Pos: (36.00691339099927,-13.69419651410662,304.8103491477188) edep 2.375503634228796 [MeV]
+   19     36.3      -14      308      9.12     1.98     3.21       312       World muIoni
+Pos: (36.29624609911566,-14.01320642615638,307.9862615676593) edep 1.976960297492443 [MeV]
+   20     36.6    -14.4      311       6.5     2.62     2.67       315       World muIoni
+Pos: (36.59387127739023,-14.39303245155114,310.6047501882462) edep 2.622439436116049 [MeV]
+   21     36.8    -14.6      313      3.75     2.75     2.01       317       World muIoni
+Pos: (36.77350193488812,-14.60264142863191,312.5885149666675) edep 2.74555675318331 [MeV]
+   22     36.9    -14.7      314     0.479     3.27     1.18       318       World muIoni
+Pos: (36.89419160163003,-14.71766594292827,313.75411082714) edep 3.271676141270881 [MeV]
+   23     36.9    -14.7      314  0.000768    0.478   0.0316       318       World muIoni
+Pos: (36.89845466213252,-14.72095228353048,313.7851195545559) edep 0.4781867463974323 [MeV]
+   24     36.9    -14.7      314         0 0.000768 0.000229       318       World muIoni
+Pos: (36.89845535271049,-14.72095260682136,313.7851238512924) edep 0.0007678898491487729 [MeV]
+   25     36.9    -14.7      314         0        0        0       318       World Scintillation
+    :----- List of 2ndaries - #SpawnInStep= 11(Rest=11,Along= 0,Post= 0), #SpawnTotal= 18 ---------------
+    :      36.9     -14.7       314  0.000912                 e-
+    :      36.9     -14.7       314  0.000146                 e-
+    :      36.9     -14.7       314  0.000184                 e-
+    :      36.9     -14.7       314  0.000546              gamma
+    :      36.9     -14.7       314  0.000419                 e-
+    :      36.9     -14.7       314  0.000586              gamma
+    :      36.9     -14.7       314  0.000855              gamma
+    :      36.9     -14.7       314     0.169              gamma
+    :      36.9     -14.7       314      43.5                 e-
+    :      36.9     -14.7       314      47.6          anti_nu_e
+    :      36.9     -14.7       314      13.8              nu_mu
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+
+*********************************************************************************************************
+* G4Track Information:   Particle = nu_mu,   Track ID = 19,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     36.9    -14.7      314      13.8        0        0         0       World initStep
+    1     13.4     77.3     24.7      13.8        0      304       304       sc1pv Transportation
+    2     11.1     86.3    -3.64      13.8        0     29.8       334       World Transportation
+    3     1.86      122     -117      13.8        0      119       453       sc2pv Transportation
+    4   -0.445      131     -145      13.8        0     29.8       483       World Transportation
+    5      -70      403   -1e+03      13.8        0      900  1.38e+03  OutOfWorld Transportation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = anti_nu_e,   Track ID = 18,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     36.9    -14.7      314      47.6        0        0         0       World initStep
+    1     25.9   -1e+03      391      47.6        0      988       988  OutOfWorld Transportation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 17,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     36.9    -14.7      314      43.5        0        0         0       World initStep
+    1     29.5     26.5      326      34.3     7.65     43.6      43.6       World eBrem
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  1 ---------------
+    :      29.5      26.5       326      1.65              gamma
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    2     28.7       34      329      31.4      1.4      8.1      51.7       World eBrem
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  2 ---------------
+    :      28.7        34       329      1.47              gamma
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    3       28     42.6      332      29.3     1.91     9.33        61       World eBrem
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  3 ---------------
+    :        28      42.6       332     0.193              gamma
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    4     26.2     60.9      339      25.5     3.13     19.7      80.7       World eIoni
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  4 ---------------
+    :      26.2      60.9       339     0.601                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    5     25.1     84.8      347      21.1     4.46     25.5       106       World eBrem
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  5 ---------------
+    :      25.1      84.8       347   0.00508              gamma
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    6     23.7     93.6      352      14.1      2.1     10.3       117       World eIoni
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  6 ---------------
+    :      23.7      93.6       352      4.88                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    7     21.9     99.4      355      12.3     1.19     6.63       123       World eIoni
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  7 ---------------
+    :      21.9      99.4       355     0.618                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    8     20.8      104      357      9.37    0.902     5.68       129       World eBrem
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  8 ---------------
+    :      20.8       104       357      2.02              gamma
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    9       21      109      361      7.73     1.34     6.18       135       World eBrem
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  9 ---------------
+    :        21       109       361     0.309              gamma
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   10     21.7      117      367      3.37     1.64     10.1       145       World eIoni
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 10 ---------------
+    :      21.7       117       367      2.72                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   11     22.2      121      367      2.33    0.736     4.62       150       World eIoni
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 11 ---------------
+    :      22.2       121       367     0.302                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   12     22.5      125      366      1.65    0.677     3.98       154       World eIoni
+   13     20.5      126      368      1.07     0.58     3.15       157       World eIoni
+   14     21.6      127      368     0.541     0.53     2.41       159       World eIoni
+   15     22.2      128      369     0.217    0.324     1.59       161       World eIoni
+   16     22.4      128      369         0    0.217    0.516       161       World eIoni
+   17     22.4      128      369         0        0        0       161       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 30,   Parent ID = 17
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     22.2      121      367     0.302        0        0         0       World initStep
+    1     22.5      121      368         0    0.302    0.857     0.857       World eIoni
+    2     22.5      121      368         0        0        0     0.857       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 29,   Parent ID = 17
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     21.7      117      367      2.72        0        0         0       World initStep
+    1       20      120      369         2    0.717     4.45      4.45       World eIoni
+    2     17.4      120      371      1.25    0.748     3.58      8.02       World eIoni
+    3       17      120      373     0.741    0.512     2.64      10.7       World eIoni
+    4       18      120      374      0.41    0.331     1.94      12.6       World eIoni
+    5     17.9      121      374     0.129    0.281     1.27      13.9       World eIoni
+    6       18      121      374         0    0.129     0.22      14.1       World eIoni
+    7       18      121      374         0        0        0      14.1       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 26,   Parent ID = 17
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     21.9     99.4      355     0.618        0        0         0       World initStep
+    1     22.4     99.8      356     0.276    0.342     1.74      1.74       World eIoni
+    2     22.5     99.8      356         0    0.276    0.745      2.48       World eIoni
+    3     22.5     99.8      356         0        0        0      2.48       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 25,   Parent ID = 17
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     23.7     93.6      352      4.88        0        0         0       World initStep
+    1     22.2     97.4      357      3.75     1.13     6.73      6.73       World eBrem
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  1 ---------------
+    :      22.2      97.4       357   0.00528              gamma
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    2     21.4      101      361      2.94    0.809     5.68      12.4       World eIoni
+    3     24.3      104      362       2.2    0.733     4.71      17.1       World eIoni
+    4     23.5      107      363      1.33    0.873     3.82        21       World eIoni
+    5     21.9      109      364     0.776    0.554     2.74      23.7       World eIoni
+    6     20.6      109      365     0.445     0.33     1.99      25.7       World eIoni
+    7     19.8      109      365    0.0239    0.422     1.37      27.1       World eIoni
+    8     19.8      109      365         0   0.0239   0.0118      27.1       World eIoni
+    9     19.8      109      365         0        0        0      27.1       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 23,   Parent ID = 17
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     26.2     60.9      339     0.601        0        0         0       World initStep
+    1     25.5     61.3      340     0.272    0.329     1.71      1.71       World eIoni
+    2     25.4       61      340         0    0.272    0.731      2.44       World eIoni
+    3     25.4       61      340         0        0        0      2.44       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 13,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     36.9    -14.7      314  0.000419        0        0         0       World initStep
+    1     36.9    -14.7      314         0 0.000419 1.82e-05  1.82e-05       World eIoni
+    2     36.9    -14.7      314         0        0        0  1.82e-05       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 11,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     36.9    -14.7      314  0.000184        0        0         0       World initStep
+    1     36.9    -14.7      314         0 0.000184 7.86e-06  7.86e-06       World eIoni
+    2     36.9    -14.7      314         0        0        0  7.86e-06       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 10,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     36.9    -14.7      314  0.000146        0        0         0       World initStep
+    1     36.9    -14.7      314         0 0.000146 6.62e-06  6.62e-06       World eIoni
+    2     36.9    -14.7      314         0        0        0  6.62e-06       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 9,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     36.9    -14.7      314  0.000912        0        0         0       World initStep
+    1     36.9    -14.7      314         0 0.000912 5.09e-05  5.09e-05       World eIoni
+    2     36.9    -14.7      314         0        0        0  5.09e-05       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 8,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     22.4    -7.57      248     0.297        0        0         0       World initStep
+    1     22.5    -7.29      249         0    0.297    0.833     0.833       World eIoni
+    2     22.5    -7.29      249         0        0        0     0.833       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 7,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     19.2    -6.49      236      0.33        0        0         0       World initStep
+    1       19    -6.68      237         0     0.33     0.98      0.98       World eIoni
+    2       19    -6.68      237         0        0        0      0.98       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 6,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     14.3    -4.77      218     0.371        0        0         0       World initStep
+    1     14.4    -4.36      218         0    0.371     1.15      1.15       World eIoni
+    2     14.4    -4.36      218         0        0        0      1.15       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 5,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     10.5     -3.7      189     0.292        0        0         0       World initStep
+    1     10.9    -3.72      189         0    0.292    0.812     0.812       World eIoni
+    2     10.9    -3.72      189         0        0        0     0.812       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 4,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     6.97    -3.21      163     0.823        0        0         0       World initStep
+    1     6.37    -3.52      164     0.477    0.346     2.06      2.06       World eIoni
+    2     6.17    -3.49      165     0.159    0.319     1.45      3.52       World eIoni
+    3     6.08    -3.51      165         0    0.159    0.311      3.83       World eIoni
+    4     6.08    -3.51      165         0        0        0      3.83       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 3,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     6.32    -2.79      156     0.321        0        0         0       World initStep
+    1     6.68    -3.01      157         0    0.321    0.938     0.938       World eIoni
+    2     6.68    -3.01      157         0        0        0     0.938       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 2,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0    0.945   -0.401       86     0.506        0        0         0       World initStep
+    1     1.26    -1.05     86.6    0.0726    0.433     1.52      1.52       World eIoni
+    2     1.26    -1.08     86.6         0   0.0726   0.0832       1.6       World eIoni
+    3     1.26    -1.08     86.6         0        0        0       1.6       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = gamma,   Track ID = 31,   Parent ID = 25
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     22.2     97.4      357   0.00528        0        0         0       World initStep
+    1     22.2     97.6      357         0 0.000543    0.352     0.352       World phot
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  1 ---------------
+    :      22.2      97.6       357   0.00473                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 32,   Parent ID = 31
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     22.2     97.6      357   0.00473        0        0         0       World initStep
+    1     22.2     97.6      357         0  0.00473 0.000701  0.000701       World eIoni
+    2     22.2     97.6      357         0        0        0  0.000701       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = gamma,   Track ID = 28,   Parent ID = 17
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0       21      109      361     0.309        0        0         0       World initStep
+    1     22.2      226      426     0.142        0      134       134       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  1 ---------------
+    :      22.2       226       426     0.167                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    2     65.8     75.3      375     0.108        0      165       299       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  2 ---------------
+    :      65.8      75.3       375    0.0337                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    3      119      119      325    0.0946        0       85       384       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  3 ---------------
+    :       119       119       325    0.0137                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    4      120      118      323    0.0891        0     1.89       386       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  4 ---------------
+    :       120       118       323   0.00548                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    5      146      105      321     0.086        0     28.8       415       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  5 ---------------
+    :       146       105       321   0.00315                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    6      169     72.9      297    0.0702        0     46.5       461       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  6 ---------------
+    :       169      72.9       297    0.0157                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    7      153     59.1      321    0.0572        0       32       493       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  7 ---------------
+    :       153      59.1       321     0.013                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    8      137     78.8      277    0.0527        0       51       544       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  8 ---------------
+    :       137      78.8       277   0.00449                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    9      123      118      287    0.0442        0       43       587       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  9 ---------------
+    :       123       118       287   0.00857                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   10      135     97.3      292    0.0377        0     24.7       612       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 10 ---------------
+    :       135      97.3       292   0.00644                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   11      122      114      291     0.034        0     21.1       633       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 11 ---------------
+    :       122       114       291   0.00371                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   12      124      112      298         0 0.000543     7.69       641       World phot
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 12 ---------------
+    :       124       112       298    0.0335                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 44,   Parent ID = 28
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      124      112      298    0.0335        0        0         0       World initStep
+    1      124      112      298         0   0.0335   0.0215    0.0215       World eIoni
+    2      124      112      298         0        0        0    0.0215       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 43,   Parent ID = 28
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      122      114      291   0.00371        0        0         0       World initStep
+    1      122      114      291         0  0.00371 0.000464  0.000464       World eIoni
+    2      122      114      291         0        0        0  0.000464       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 42,   Parent ID = 28
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      135     97.3      292   0.00644        0        0         0       World initStep
+    1      135     97.3      292         0  0.00644  0.00119   0.00119       World eIoni
+    2      135     97.3      292         0        0        0   0.00119       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 41,   Parent ID = 28
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      123      118      287   0.00857        0        0         0       World initStep
+    1      123      118      287         0  0.00857  0.00195   0.00195       World eIoni
+    2      123      118      287         0        0        0   0.00195       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 40,   Parent ID = 28
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      137     78.8      277   0.00449        0        0         0       World initStep
+    1      137     78.8      277         0  0.00449 0.000641  0.000641       World eIoni
+    2      137     78.8      277         0        0        0  0.000641       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 39,   Parent ID = 28
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      153     59.1      321     0.013        0        0         0       World initStep
+    1      153     59.1      321         0    0.013  0.00405   0.00405       World eIoni
+    2      153     59.1      321         0        0        0   0.00405       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 38,   Parent ID = 28
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      169     72.9      297    0.0157        0        0         0       World initStep
+    1      169     72.9      297         0   0.0157  0.00567   0.00567       World eIoni
+    2      169     72.9      297         0        0        0   0.00567       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 37,   Parent ID = 28
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      146      105      321   0.00315        0        0         0       World initStep
+    1      146      105      321         0  0.00315 0.000354  0.000354       World eIoni
+    2      146      105      321         0        0        0  0.000354       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 36,   Parent ID = 28
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      120      118      323   0.00548        0        0         0       World initStep
+    1      120      118      323         0  0.00548 0.000901  0.000901       World eIoni
+    2      120      118      323         0        0        0  0.000901       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 35,   Parent ID = 28
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      119      119      325    0.0137        0        0         0       World initStep
+    1      119      119      325         0   0.0137  0.00446   0.00446       World eIoni
+    2      119      119      325         0        0        0   0.00446       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 34,   Parent ID = 28
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     65.8     75.3      375    0.0337        0        0         0       World initStep
+    1     65.8     75.3      375         0   0.0337   0.0217    0.0217       World eIoni
+    2     65.8     75.3      375         0        0        0    0.0217       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 33,   Parent ID = 28
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     22.2      226      426     0.167        0        0         0       World initStep
+    1     22.2      226      426         0    0.167    0.339     0.339       World eIoni
+    2     22.2      226      426         0        0        0     0.339       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = gamma,   Track ID = 27,   Parent ID = 17
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     20.8      104      357      2.02        0        0         0       World initStep
+    1     21.6      125      370     0.596        0     24.6      24.6       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  1 ---------------
+    :      21.6       125       370      1.43                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    2     18.7      128      369     0.239        0     4.48      29.1       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  2 ---------------
+    :      18.7       128       369     0.357                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    3     36.4     76.3      301     0.236        0     86.9       116       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  3 ---------------
+    :      36.4      76.3       301    0.0025                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    4     36.6     72.5      298     0.211        0     5.35       121       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  4 ---------------
+    :      36.6      72.5       298     0.026                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    5     80.2     54.6      242     0.132        0     73.1       194       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  5 ---------------
+    :      80.2      54.6       242    0.0782                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    6     58.4      -65      359      0.12        0      169       364       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  6 ---------------
+    :      58.4       -65       359     0.012                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    7    -46.9     -185      359     0.109        0      160       524       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  7 ---------------
+    :     -46.9      -185       359    0.0116                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    8     -151     -174      326    0.0961        0      110       634       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  8 ---------------
+    :      -151      -174       326    0.0126                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    9     -158     -156      330    0.0705        0     19.7       653       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  9 ---------------
+    :      -158      -156       330    0.0257                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   10     -141     -175      324    0.0631        0     26.6       680       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 10 ---------------
+    :      -141      -175       324   0.00737                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   11     -139     -174      323    0.0623        0     1.86       682       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 11 ---------------
+    :      -139      -174       323   0.00078                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   12     -135     -172      321    0.0529        0     5.18       687       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 12 ---------------
+    :      -135      -172       321   0.00938                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   13     -139     -299      354    0.0443        0      131       818       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 13 ---------------
+    :      -139      -299       354   0.00858                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   14     -150     -273      354    0.0387        0     28.1       846       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 14 ---------------
+    :      -150      -273       354   0.00558                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   15     -147     -275      357    0.0348        0     5.04       851       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 15 ---------------
+    :      -147      -275       357   0.00396                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   16     -151     -272      359     0.032        0     5.87       857       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 16 ---------------
+    :      -151      -272       359   0.00278                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   17     -124     -244      333     0.031        0     47.4       904       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 17 ---------------
+    :      -124      -244       333   0.00105                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   18     -120     -252      299         0 0.000543     34.7       939       World phot
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 18 ---------------
+    :      -120      -252       299    0.0304                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 62,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -120     -252      299    0.0304        0        0         0       World initStep
+    1     -120     -252      299         0   0.0304   0.0181    0.0181       World eIoni
+    2     -120     -252      299         0        0        0    0.0181       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 61,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -124     -244      333   0.00105        0        0         0       World initStep
+    1     -124     -244      333         0  0.00105 6.26e-05  6.26e-05       World eIoni
+    2     -124     -244      333         0        0        0  6.26e-05       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 60,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -151     -272      359   0.00278        0        0         0       World initStep
+    1     -151     -272      359         0  0.00278 0.000287  0.000287       World eIoni
+    2     -151     -272      359         0        0        0  0.000287       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 59,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -147     -275      357   0.00396        0        0         0       World initStep
+    1     -147     -275      357         0  0.00396 0.000519  0.000519       World eIoni
+    2     -147     -275      357         0        0        0  0.000519       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 58,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -150     -273      354   0.00558        0        0         0       World initStep
+    1     -150     -273      354         0  0.00558 0.000929  0.000929       World eIoni
+    2     -150     -273      354         0        0        0  0.000929       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 57,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -139     -299      354   0.00858        0        0         0       World initStep
+    1     -139     -299      354         0  0.00858  0.00196   0.00196       World eIoni
+    2     -139     -299      354         0        0        0   0.00196       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 56,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -135     -172      321   0.00938        0        0         0       World initStep
+    1     -135     -172      321         0  0.00938  0.00228   0.00228       World eIoni
+    2     -135     -172      321         0        0        0   0.00228       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 55,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -139     -174      323   0.00078        0        0         0       World initStep
+    1     -139     -174      323         0  0.00078 4.08e-05  4.08e-05       World eIoni
+    2     -139     -174      323         0        0        0  4.08e-05       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 54,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -141     -175      324   0.00737        0        0         0       World initStep
+    1     -141     -175      324         0  0.00737   0.0015    0.0015       World eIoni
+    2     -141     -175      324         0        0        0    0.0015       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 53,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -158     -156      330    0.0257        0        0         0       World initStep
+    1     -158     -156      330         0   0.0257   0.0135    0.0135       World eIoni
+    2     -158     -156      330         0        0        0    0.0135       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 52,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -151     -174      326    0.0126        0        0         0       World initStep
+    1     -151     -174      326         0   0.0126  0.00382   0.00382       World eIoni
+    2     -151     -174      326         0        0        0   0.00382       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 51,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0    -46.9     -185      359    0.0116        0        0         0       World initStep
+    1    -46.9     -185      359         0   0.0116  0.00331   0.00331       World eIoni
+    2    -46.9     -185      359         0        0        0   0.00331       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 50,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     58.4      -65      359     0.012        0        0         0       World initStep
+    1     58.4      -65      359         0    0.012  0.00351   0.00351       World eIoni
+    2     58.4      -65      359         0        0        0   0.00351       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 49,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     80.2     54.6      242    0.0782        0        0         0       World initStep
+    1     80.2     54.6      242         0   0.0782   0.0947    0.0947       World eIoni
+    2     80.2     54.6      242         0        0        0    0.0947       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 48,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     36.6     72.5      298     0.026        0        0         0       World initStep
+    1     36.6     72.5      298         0    0.026   0.0137    0.0137       World eIoni
+    2     36.6     72.5      298         0        0        0    0.0137       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 47,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     36.4     76.3      301    0.0025        0        0         0       World initStep
+    1     36.4     76.3      301         0   0.0025 0.000241  0.000241       World eIoni
+    2     36.4     76.3      301         0        0        0  0.000241       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 46,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     18.7      128      369     0.357        0        0         0       World initStep
+    1     18.4      129      369    0.0646    0.293     1.09      1.09       World eIoni
+    2     18.4      129      369         0   0.0646   0.0681      1.16       World eIoni
+    3     18.4      129      369         0        0        0      1.16       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 45,   Parent ID = 27
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     21.6      125      370      1.43        0        0         0       World initStep
+    1     22.2      127      372     0.786    0.641     2.86      2.86       World eIoni
+    2     22.4      127      373     0.398    0.388     2.01      4.87       World eIoni
+    3     23.1      128      373    0.0823    0.316     1.24      6.11       World eIoni
+    4     23.1      128      373         0   0.0823    0.103      6.21       World eIoni
+    5     23.1      128      373         0        0        0      6.21       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = gamma,   Track ID = 24,   Parent ID = 17
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     25.1     84.8      347   0.00508        0        0         0       World initStep
+    1     25.1     84.8      347         0 0.000543   0.0241    0.0241       World phot
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  1 ---------------
+    :      25.1      84.8       347   0.00453                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 63,   Parent ID = 24
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     25.1     84.8      347   0.00453        0        0         0       World initStep
+    1     25.1     84.8      347         0  0.00453 0.000651  0.000651       World eIoni
+    2     25.1     84.8      347         0        0        0  0.000651       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = gamma,   Track ID = 22,   Parent ID = 17
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0       28     42.6      332     0.193        0        0         0       World initStep
+    1     20.4      115      361     0.192        0     78.6      78.6       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  1 ---------------
+    :      20.4       115       361  0.000469                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    2     21.4      164      380     0.117        0     51.8       130       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  2 ---------------
+    :      21.4       164       380    0.0753                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    3     36.5     63.9      420    0.0895        0      109       239       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  3 ---------------
+    :      36.5      63.9       420    0.0273                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    4     94.1     82.9      381    0.0831        0     72.3       311       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  4 ---------------
+    :      94.1      82.9       381   0.00639                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    5     94.9      129      342    0.0822        0     60.3       372       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  5 ---------------
+    :      94.9       129       342  0.000892                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    6      129      192      282    0.0775        0     93.7       465       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  6 ---------------
+    :       129       192       282   0.00473                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    7      128      199      282    0.0599        0     7.25       473       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  7 ---------------
+    :       128       199       282    0.0176                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    8      129      179      274    0.0494        0     21.9       495       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  8 ---------------
+    :       129       179       274    0.0105                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    9      129      179      275    0.0435        0     1.11       496       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  9 ---------------
+    :       129       179       275   0.00588                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   10      167      179      244    0.0387        0     49.1       545       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 10 ---------------
+    :       167       179       244   0.00479                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   11      167      164      261         0 0.000543     22.8       567       World phot
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 11 ---------------
+    :       167       164       261    0.0382                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 74,   Parent ID = 22
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      167      164      261    0.0382        0        0         0       World initStep
+    1      167      164      261         0   0.0382   0.0271    0.0271       World eIoni
+    2      167      164      261         0        0        0    0.0271       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 73,   Parent ID = 22
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      167      179      244   0.00479        0        0         0       World initStep
+    1      167      179      244         0  0.00479 0.000714  0.000714       World eIoni
+    2      167      179      244         0        0        0  0.000714       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 72,   Parent ID = 22
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      129      179      275   0.00588        0        0         0       World initStep
+    1      129      179      275         0  0.00588  0.00102   0.00102       World eIoni
+    2      129      179      275         0        0        0   0.00102       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 71,   Parent ID = 22
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      129      179      274    0.0105        0        0         0       World initStep
+    1      129      179      274         0   0.0105   0.0028    0.0028       World eIoni
+    2      129      179      274         0        0        0    0.0028       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 70,   Parent ID = 22
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      128      199      282    0.0176        0        0         0       World initStep
+    1      128      199      282         0   0.0176   0.0069    0.0069       World eIoni
+    2      128      199      282         0        0        0    0.0069       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 69,   Parent ID = 22
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      129      192      282   0.00473        0        0         0       World initStep
+    1      129      192      282         0  0.00473   0.0007    0.0007       World eIoni
+    2      129      192      282         0        0        0    0.0007       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 68,   Parent ID = 22
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     94.9      129      342  0.000892        0        0         0       World initStep
+    1     94.9      129      342         0 0.000892 4.93e-05  4.93e-05       World eIoni
+    2     94.9      129      342         0        0        0  4.93e-05       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 67,   Parent ID = 22
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     94.1     82.9      381   0.00639        0        0         0       World initStep
+    1     94.1     82.9      381         0  0.00639  0.00117   0.00117       World eIoni
+    2     94.1     82.9      381         0        0        0   0.00117       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 66,   Parent ID = 22
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     36.5     63.9      420    0.0273        0        0         0       World initStep
+    1     36.5     63.9      420         0   0.0273    0.015     0.015       World eIoni
+    2     36.5     63.9      420         0        0        0     0.015       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 65,   Parent ID = 22
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     21.4      164      380    0.0753        0        0         0       World initStep
+    1     21.4      164      380         0   0.0753   0.0887    0.0887       World eIoni
+    2     21.4      164      380         0        0        0    0.0887       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 64,   Parent ID = 22
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     20.4      115      361  0.000469        0        0         0       World initStep
+    1     20.4      115      361         0 0.000469 2.09e-05  2.09e-05       World eIoni
+    2     20.4      115      361         0        0        0  2.09e-05       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = gamma,   Track ID = 21,   Parent ID = 17
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     28.7       34      329      1.47        0        0         0       World initStep
+    1     26.6     70.1      342     0.855        0     38.6      38.6       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  1 ---------------
+    :      26.6      70.1       342     0.615                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    2     28.6      119      324     0.413        0     52.4        91       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  2 ---------------
+    :      28.6       119       324     0.442                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    3     16.9      129      332     0.159        0     17.6       109       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  3 ---------------
+    :      16.9       129       332     0.255                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    4     26.5      123      325     0.126        0     13.4       122       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  4 ---------------
+    :      26.5       123       325    0.0327                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    5     49.7      143      330    0.0856        0     30.6       153       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  5 ---------------
+    :      49.7       143       330    0.0402                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    6     3.54      122      301    0.0736        0     58.4       211       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  6 ---------------
+    :      3.54       122       301     0.012                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    7    -8.83      128      315     0.069        0     19.8       231       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  7 ---------------
+    :     -8.83       128       315   0.00456                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    8     23.5      174      401    0.0576        0      102       333       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  8 ---------------
+    :      23.5       174       401    0.0114                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    9      152      112      282    0.0491        0      186       518       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  9 ---------------
+    :       152       112       282   0.00857                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   10      145      144      285    0.0473        0     32.5       551       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 10 ---------------
+    :       145       144       285   0.00173                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   11      148      151      281     0.046        0        9       560       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 11 ---------------
+    :       148       151       281   0.00129                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   12      174      168      282    0.0404        0     31.5       591       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 12 ---------------
+    :       174       168       282   0.00566                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   13      140      177      255         0 0.000543     44.1       635       World phot
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 13 ---------------
+    :       140       177       255    0.0398                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 87,   Parent ID = 21
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      140      177      255    0.0398        0        0         0       World initStep
+    1      140      177      255         0   0.0398   0.0292    0.0292       World eIoni
+    2      140      177      255         0        0        0    0.0292       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 86,   Parent ID = 21
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      174      168      282   0.00566        0        0         0       World initStep
+    1      174      168      282         0  0.00566 0.000952  0.000952       World eIoni
+    2      174      168      282         0        0        0  0.000952       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 85,   Parent ID = 21
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      148      151      281   0.00129        0        0         0       World initStep
+    1      148      151      281         0  0.00129 8.47e-05  8.47e-05       World eIoni
+    2      148      151      281         0        0        0  8.47e-05       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 84,   Parent ID = 21
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      145      144      285   0.00173        0        0         0       World initStep
+    1      145      144      285         0  0.00173 0.000133  0.000133       World eIoni
+    2      145      144      285         0        0        0  0.000133       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 83,   Parent ID = 21
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      152      112      282   0.00857        0        0         0       World initStep
+    1      152      112      282         0  0.00857  0.00195   0.00195       World eIoni
+    2      152      112      282         0        0        0   0.00195       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 82,   Parent ID = 21
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     23.5      174      401    0.0114        0        0         0       World initStep
+    1     23.5      174      401         0   0.0114   0.0032    0.0032       World eIoni
+    2     23.5      174      401         0        0        0    0.0032       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 81,   Parent ID = 21
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0    -8.83      128      315   0.00456        0        0         0       World initStep
+    1    -8.83      128      315         0  0.00456 0.000658  0.000658       World eIoni
+    2    -8.83      128      315         0        0        0  0.000658       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 80,   Parent ID = 21
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     3.54      122      301     0.012        0        0         0       World initStep
+    1     3.54      122      301         0    0.012  0.00353   0.00353       World eIoni
+    2     3.54      122      301         0        0        0   0.00353       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 79,   Parent ID = 21
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     49.7      143      330    0.0402        0        0         0       World initStep
+    1     49.7      143      330         0   0.0402   0.0297    0.0297       World eIoni
+    2     49.7      143      330         0        0        0    0.0297       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 78,   Parent ID = 21
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     26.5      123      325    0.0327        0        0         0       World initStep
+    1     26.5      123      325         0   0.0327   0.0207    0.0207       World eIoni
+    2     26.5      123      325         0        0        0    0.0207       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 77,   Parent ID = 21
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     16.9      129      332     0.255        0        0         0       World initStep
+    1     16.7      130      332         0    0.255    0.661     0.661       World eIoni
+    2     16.7      130      332         0        0        0     0.661       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 76,   Parent ID = 21
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     28.6      119      324     0.442        0        0         0       World initStep
+    1     28.9      120      324    0.0541    0.388     1.36      1.36       World eIoni
+    2     28.9      120      324         0   0.0541     0.05      1.41       World eIoni
+    3     28.9      120      324         0        0        0      1.41       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 75,   Parent ID = 21
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     26.6     70.1      342     0.615        0        0         0       World initStep
+    1     26.5     70.7      343     0.306    0.309     1.73      1.73       World eIoni
+    2     26.8     70.7      344         0    0.306    0.873      2.61       World eIoni
+    3     26.8     70.7      344         0        0        0      2.61       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = gamma,   Track ID = 20,   Parent ID = 17
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     29.5     26.5      326      1.65        0        0         0       World initStep
+    1     11.6      192      392     0.297        0      179       179       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  1 ---------------
+    :      11.6       192       392      1.35                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    2       13      192      391     0.216        0     1.93       181       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  2 ---------------
+    :        13       192       391    0.0806                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    3     26.7      228      379     0.136        0     40.3       221       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  3 ---------------
+    :      26.7       228       379    0.0804                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    4     46.9      205      375     0.118        0     30.7       252       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  4 ---------------
+    :      46.9       205       375    0.0182                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    5      248      266      368    0.0815        0      210       462       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  5 ---------------
+    :       248       266       368    0.0362                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    6      101      275      394    0.0674        0      150       612       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  6 ---------------
+    :       101       275       394     0.014                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    7      122      199      399    0.0644        0     78.7       691       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  7 ---------------
+    :       122       199       399   0.00306                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    8      111      142      348    0.0561        0     77.6       768       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  8 ---------------
+    :       111       142       348   0.00828                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    9      150      147      344    0.0466        0     39.6       808       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  9 ---------------
+    :       150       147       344   0.00945                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   10      108      140      324    0.0404        0     46.6       854       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 10 ---------------
+    :       108       140       324   0.00626                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   11      116      149      324    0.0351        0     11.7       866       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 11 ---------------
+    :       116       149       324   0.00529                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   12      111      142      327    0.0314        0      8.8       875       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 12 ---------------
+    :       111       142       327   0.00374                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   13      107      168      300     0.031        0     37.2       912       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 13 ---------------
+    :       107       168       300  0.000383                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   14      116      193      291    0.0309 8.51e-05     27.9       940       World compt
+   15      120      206      291         0 0.000543     14.2       954       World phot
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 14 ---------------
+    :       120       206       291    0.0303                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+
+*********************************************************************************************************
+* G4Track Information:   Particle = gamma,   Track ID = 16,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     36.9    -14.7      314     0.169        0        0         0       World initStep
+    1     -123    -24.8      336     0.144        0      162       162       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  1 ---------------
+    :      -123     -24.8       336    0.0252                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    2     -144    -31.4      307     0.119        0     36.1       198       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  2 ---------------
+    :      -144     -31.4       307    0.0254                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    3     -161    -3.23      303     0.104        0     33.2       231       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  3 ---------------
+    :      -161     -3.23       303    0.0146                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    4     -161    -3.01      301    0.0794        0     1.42       233       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  4 ---------------
+    :      -161     -3.01       301    0.0247                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    5     -134     32.7      329    0.0696        0     53.2       286       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  5 ---------------
+    :      -134      32.7       329   0.00975                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    6     -103     28.5      311    0.0551        0     35.9       322       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  6 ---------------
+    :      -103      28.5       311    0.0146                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    7     -118     37.1      319    0.0478        0     19.3       341       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  7 ---------------
+    :      -118      37.1       319   0.00722                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    8     -124     18.1      306    0.0434        0       24       365       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  8 ---------------
+    :      -124      18.1       306   0.00442                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+    9     -127     19.4      306    0.0424        0     2.87       368       World compt
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  9 ---------------
+    :      -127      19.4       306   0.00101                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+   10     -144     65.9      304         0 0.000543     49.6       417       World phot
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal= 10 ---------------
+    :      -144      65.9       304    0.0419                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+
+*********************************************************************************************************
+* G4Track Information:   Particle = gamma,   Track ID = 15,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     36.9    -14.7      314  0.000855        0        0         0       World initStep
+    1     36.9    -14.7      314         0 0.000543 4.64e-05  4.64e-05       World phot
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  1 ---------------
+    :      36.9     -14.7       314  0.000312                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+
+*********************************************************************************************************
+* G4Track Information:   Particle = gamma,   Track ID = 14,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     36.9    -14.7      314  0.000586        0        0         0       World initStep
+    1     36.9    -14.7      314         0 0.000543 0.000447  0.000447       World phot
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  1 ---------------
+    :      36.9     -14.7       314  4.29e-05                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+
+*********************************************************************************************************
+* G4Track Information:   Particle = gamma,   Track ID = 12,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     36.9    -14.7      314  0.000546        0        0         0       World initStep
+    1     36.9    -14.7      314         0 0.000543 0.000867  0.000867       World phot
+    :----- List of 2ndaries - #SpawnInStep=  1(Rest= 0,Along= 0,Post= 1), #SpawnTotal=  1 ---------------
+    :      36.9     -14.7       314  2.94e-06                 e-
+    :----------------------------------------------------------------- EndOf2ndaries Info ---------------
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 114,   Parent ID = 12
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     36.9    -14.7      314  2.94e-06        0        0         0       World initStep
+    1     36.9    -14.7      314         0 2.94e-06  9.1e-07   9.1e-07       World eIoni
+    2     36.9    -14.7      314         0        0        0   9.1e-07       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 113,   Parent ID = 14
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     36.9    -14.7      314  4.29e-05        0        0         0       World initStep
+    1     36.9    -14.7      314         0 4.29e-05 3.48e-06  3.48e-06       World eIoni
+    2     36.9    -14.7      314         0        0        0  3.48e-06       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 112,   Parent ID = 15
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     36.9    -14.7      314  0.000312        0        0         0       World initStep
+    1     36.9    -14.7      314         0 0.000312  1.3e-05   1.3e-05       World eIoni
+    2     36.9    -14.7      314         0        0        0   1.3e-05       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 111,   Parent ID = 16
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -144     65.9      304    0.0419        0        0         0       World initStep
+    1     -144     65.9      304         0   0.0419   0.0319    0.0319       World eIoni
+    2     -144     65.9      304         0        0        0    0.0319       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 110,   Parent ID = 16
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -127     19.4      306   0.00101        0        0         0       World initStep
+    1     -127     19.4      306         0  0.00101 5.93e-05  5.93e-05       World eIoni
+    2     -127     19.4      306         0        0        0  5.93e-05       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 109,   Parent ID = 16
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -124     18.1      306   0.00442        0        0         0       World initStep
+    1     -124     18.1      306         0  0.00442 0.000624  0.000624       World eIoni
+    2     -124     18.1      306         0        0        0  0.000624       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 108,   Parent ID = 16
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -118     37.1      319   0.00722        0        0         0       World initStep
+    1     -118     37.1      319         0  0.00722  0.00145   0.00145       World eIoni
+    2     -118     37.1      319         0        0        0   0.00145       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 107,   Parent ID = 16
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -103     28.5      311    0.0146        0        0         0       World initStep
+    1     -103     28.5      311         0   0.0146  0.00494   0.00494       World eIoni
+    2     -103     28.5      311         0        0        0   0.00494       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 106,   Parent ID = 16
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -134     32.7      329   0.00975        0        0         0       World initStep
+    1     -134     32.7      329         0  0.00975  0.00244   0.00244       World eIoni
+    2     -134     32.7      329         0        0        0   0.00244       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 105,   Parent ID = 16
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -161    -3.01      301    0.0247        0        0         0       World initStep
+    1     -161    -3.01      301         0   0.0247   0.0126    0.0126       World eIoni
+    2     -161    -3.01      301         0        0        0    0.0126       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 104,   Parent ID = 16
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -161    -3.23      303    0.0146        0        0         0       World initStep
+    1     -161    -3.23      303         0   0.0146  0.00498   0.00498       World eIoni
+    2     -161    -3.23      303         0        0        0   0.00498       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 103,   Parent ID = 16
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -144    -31.4      307    0.0254        0        0         0       World initStep
+    1     -144    -31.5      307         0   0.0254   0.0132    0.0132       World eIoni
+    2     -144    -31.5      307         0        0        0    0.0132       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 102,   Parent ID = 16
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     -123    -24.8      336    0.0252        0        0         0       World initStep
+    1     -123    -24.8      336         0   0.0252    0.013     0.013       World eIoni
+    2     -123    -24.8      336         0        0        0     0.013       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 101,   Parent ID = 20
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      120      206      291    0.0303        0        0         0       World initStep
+    1      120      206      291         0   0.0303   0.0181    0.0181       World eIoni
+    2      120      206      291         0        0        0    0.0181       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 100,   Parent ID = 20
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      107      168      300  0.000383        0        0         0       World initStep
+    1      107      168      300         0 0.000383 1.64e-05  1.64e-05       World eIoni
+    2      107      168      300         0        0        0  1.64e-05       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 99,   Parent ID = 20
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      111      142      327   0.00374        0        0         0       World initStep
+    1      111      142      327         0  0.00374  0.00047   0.00047       World eIoni
+    2      111      142      327         0        0        0   0.00047       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 98,   Parent ID = 20
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      116      149      324   0.00529        0        0         0       World initStep
+    1      116      149      324         0  0.00529 0.000848  0.000848       World eIoni
+    2      116      149      324         0        0        0  0.000848       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 97,   Parent ID = 20
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      108      140      324   0.00626        0        0         0       World initStep
+    1      108      140      324         0  0.00626  0.00113   0.00113       World eIoni
+    2      108      140      324         0        0        0   0.00113       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 96,   Parent ID = 20
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      150      147      344   0.00945        0        0         0       World initStep
+    1      150      147      344         0  0.00945  0.00231   0.00231       World eIoni
+    2      150      147      344         0        0        0   0.00231       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 95,   Parent ID = 20
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      111      142      348   0.00828        0        0         0       World initStep
+    1      111      142      348         0  0.00828  0.00184   0.00184       World eIoni
+    2      111      142      348         0        0        0   0.00184       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 94,   Parent ID = 20
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      122      199      399   0.00306        0        0         0       World initStep
+    1      122      199      399         0  0.00306 0.000336  0.000336       World eIoni
+    2      122      199      399         0        0        0  0.000336       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 93,   Parent ID = 20
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      101      275      394     0.014        0        0         0       World initStep
+    1      101      275      394         0    0.014  0.00464   0.00464       World eIoni
+    2      101      275      394         0        0        0   0.00464       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 92,   Parent ID = 20
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0      248      266      368    0.0362        0        0         0       World initStep
+    1      248      266      368         0   0.0362   0.0246    0.0246       World eIoni
+    2      248      266      368         0        0        0    0.0246       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 91,   Parent ID = 20
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     46.9      205      375    0.0182        0        0         0       World initStep
+    1     46.9      205      375         0   0.0182  0.00733   0.00733       World eIoni
+    2     46.9      205      375         0        0        0   0.00733       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 90,   Parent ID = 20
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     26.7      228      379    0.0804        0        0         0       World initStep
+    1     26.7      228      379         0   0.0804   0.0993    0.0993       World eIoni
+    2     26.7      228      379         0        0        0    0.0993       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 89,   Parent ID = 20
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0       13      192      391    0.0806        0        0         0       World initStep
+    1       13      192      391         0   0.0806   0.0997    0.0997       World eIoni
+    2       13      192      391         0        0        0    0.0997       World Scintillation
+
+*********************************************************************************************************
+* G4Track Information:   Particle = e-,   Track ID = 88,   Parent ID = 20
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0     11.6      192      392      1.35        0        0         0       World initStep
+    1     11.1      194      393     0.889    0.461     2.77      2.77       World eIoni
+    2     10.1      195      394     0.555    0.334     2.16      4.92       World eIoni
+    3     9.75      194      395     0.135    0.421     1.62      6.55       World eIoni
+    4     9.67      194      395         0    0.135    0.238      6.78       World eIoni
+    5     9.67      194      395         0        0        0      6.78       World Scintillation
+Graphics systems deleted.
+Visualization Manager deleting...
